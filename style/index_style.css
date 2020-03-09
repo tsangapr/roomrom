@@ -1,15 +1,12 @@
-.title {
-    font-size: 12vh;
-    font-size: 12vw;
-    color:cyan  ;
+h1 {
     text-align: center;
+    font-size: 11vh;
+    color: navy; 
 }
 
-
-.navbar {
-    vertical-align: right;
-    right: -80vw;
-    margin-right: 85vw;
-    margin-top: 5vh;
+#login {
+    margin-left: 90%;
+    font-size: 3vh;
     
 }
+
