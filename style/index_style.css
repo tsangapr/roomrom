@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+    font-size: 11vh;
+    color: dodgerblue; 
+}
+
+#heading {
+    text-decoration: none;
+}
+
+#login {
+    margin-left: 90%;
+    font-size: 3vh;
+    
+}
+
+#fromwhere {
+    float: left;
+    margin-left: 15%;
+    width: 30vw;
+    margin-top: 5vh;
+    height: 30vh;
+}
+
+#towhere {
+    float: right;
+    margin-right: 15%;
+    width: 30vw;
+    margin-top: 5vh;
+}
+
+#submit {
+    margin-top: 65vh;
+    margin-left: 0.7%;
+    margin-right: 0%;
+}
