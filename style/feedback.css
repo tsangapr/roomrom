@@ -1,10 +1,21 @@
-#signin {
-    position: absolute;
-    right: 10%;
-    font-size:2vh;
+h1 {
     text-align: center;
-    width: 10vw;
-    height: 5vh;
-    margin-left: 0vw;
+    font-size: 11vh;
+    color: dodgerblue; 
+}
+
+
+#heading {
+    text-decoration: none;
+}
+
+
+#login {
+    margin-left: 90%;
+    font-size: 3vh;
     
+}
+
+.feedback-end {
+    margin-left: 10%;
 }
