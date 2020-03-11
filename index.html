@@ -34,9 +34,9 @@
     <button type="button" class="btn btn-outline-primary">Log in</button>
     </a>
 </br>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">Menu</a>
+</br>
+<nav id="menubar" class="navbar navbar-expand-lg navbar-light bg-light">
+  <a id="menu" class="navbar-brand" href="index.html">Menu</a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -44,13 +44,16 @@
   <div class="navbar-collapse collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a id="home" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
+      <div class="popup" onclick="popup()">
       <li class="nav-item">
-        <a class="nav-link disabled" href="savelist.html" >Save List</a>
+        <a id="savelist" class="nav-link disabled" href="savelist.html" >Save List</a>
+        <span class="popuptext" id="myPopup">Log in to see saved route!</span>
       </li>
+    </div>
       <li class="nav-item">
-        <a class="nav-link" href="feedback.html">Give Feedback/Report an Issue</a>
+        <a id="issuereport" class="nav-link" href="feedback.html">Give Feedback/Report an Issue</a>
       </li>
     </ul>
   </div>
@@ -118,7 +121,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="scripts/firebase_api_carly.js"> </script>
+    <script src="js/index.js"> </script>
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
