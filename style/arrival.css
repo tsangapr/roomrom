@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    font-size: 11vh;
+    color: dodgerblue; 
+}
+
+h2 {
+    text-align: center;
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+
+}
+
+#snorlax {
+    margin-left: 30%;
+    margin-top: 5vh;
+    height: 60vh;
+
+}
+
+#heading {
+    text-decoration: none;
+}
