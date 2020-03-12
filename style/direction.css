@@ -14,6 +14,28 @@ h1 {
     
 }
 
+#hoverFeedback {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border:dodgerblue;
+    outline: dodgerblue;
+    background-color:white;
+    color: dodgerblue;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    border-style:solid
+  }
+  
+  #hoverFeedback:hover {
+    color:white;
+    background-color:dodgerblue;
+  }
+
 .title {
     font-size: 3vh;
     font-size: 3vw;
@@ -25,3 +47,12 @@ h1 {
     font-size: 1vh;
     font-size: 1vw;
   }
+
+  #snorlax {
+      display:block;
+    margin-left: auto;
+    margin-right:auto;
+    /* margin-top: auto; */
+    height: 60vh;
+}
+
