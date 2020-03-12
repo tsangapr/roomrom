@@ -1,0 +1,56 @@
+#afterlogin {
+    text-align: right;
+    margin-right: 3vw;
+    font-size: 3vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 11vh;
+    color: dodgerblue; 
+}
+
+#heading {
+    text-decoration: none;
+}
+
+#fromwhere {
+    float: left;
+    margin-left: 15%;
+    width: 30vw;
+    margin-top: 5vh;
+    height: 30vh;
+}
+
+#towhere {
+    float: right;
+    margin-right: 15%;
+    width: 30vw;
+    margin-top: 5vh;
+}
+
+#submit {
+    margin-top: 50vh;
+    margin-left: 0.7%;
+    margin-right: 0%;
+    width: 5vw;
+    height: 5vh;
+}
+
+#menu {
+    font-size: 1.5vw;
+}
+
+#home {
+    font-size: 1.5vw;
+}
+
+#savelist {
+    font-size: 1.5vw;
+    color: black;
+}
+
+#issuereport {
+    font-size: 1.5vw;
+    color: black;
+}

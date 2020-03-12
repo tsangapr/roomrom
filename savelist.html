@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>RoomRoom/SignUp</title>
+    <title>roomroom/savelist</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="viewpoint" content="width=device-wdith, initial-scale=1.0">
     <meta name="author" content="BCIT">
 
     <!----------------------------------------------->
@@ -21,37 +20,15 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="style/signup.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 <body>
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader"></div>
 
-    <form id="myform" action="/action_page.php" style="border:1px solid #ccc">
-        <div class="container">
-          <h1>Sign Up</h1>
-          <p>Please enter your email address to create an account.</p>
-          <hr>
-      
-          <label for="email"><b>Email Address</b></label>
-          <input id="emailAddress" type="text" placeholder="Enter Email" name="email" required>
-          
-          <label>
-            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
-          </label>
-          
-          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-      
-          <div class="clearfix">
-            <a href="login.html"><button type="button" class="cancelbtn">Cancel</button></a> <!--go back to the sign in page-->
-            <a href="main.html"><button id="signupbutton" type="submit" class="signupbtn">Sign Up</button></a>
-          </div>
-        </div>
-      </form>
+    <h1>save list</h1>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -64,34 +41,17 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="js/login.js"> </script>
+    <script src="scripts/firebase_api_carly.js"> </script>
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    
+    <script src="scripts/script.js"></script>
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
 
-    <script>
-
-      function writeEmailAddress() {
-        document.getElementById("myform").addEventListener("submit", function(e){
-          e.preventDefault();
-          var emailaddress = document.getElementById("emailAddress").value; // get the email address
-          console.log(emailaddress);
-          //console.log(pw);
-          db.collection("userAccount").doc("Accounts").set({
-            value: emailaddress
-          })
-        })
-      }
-      writeEmailAddress();
-
-    </script>
-
 
 </body>
-</html>    
+</html>  

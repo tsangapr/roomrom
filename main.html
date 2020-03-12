@@ -21,22 +21,22 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="style/index_style.css">
+    <link rel="stylesheet" href="style/main.css">
     <link rel="import" href="login.html">
 
 <body>
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-    <a id="heading" href="index.html">
+    <a id="heading" href="index.html"></a>
     <h1>RoomRoomRun</h1>
     </a>
-    <a id="login" href="login.html">
-    <button type="button" class="btn btn-outline-primary">Log in</button>
-    </a>
+    <p>Welcome Back,  </p> <!--firebase account name-->
+    <p id="afterlogin">Welcome back, Lira!</p> <!--user name after welcome back message-->
+  
 </br>
-</br>
-<nav id="menubar" class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a id="menu" class="navbar-brand" href="index.html">Menu</a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -47,12 +47,9 @@
       <li class="nav-item active">
         <a id="home" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
       </li>
-      <div class="popup" onclick="popup()">
       <li class="nav-item">
-        <a id="savelist" class="nav-link disabled" href="savelist.html" >Save List</a>
-        <span class="popuptext" id="myPopup">Log in to see saved route!</span>
+        <a id="savelist" class="nav-link enabled" href="savelist.html" >Save List</a>
       </li>
-    </div>
       <li class="nav-item">
         <a id="issuereport" class="nav-link" href="feedback.html">Give Feedback/Report an Issue</a>
       </li>
@@ -69,19 +66,18 @@
           <form action="/action_page.php" method="get">
             <input list="browsers" name="browser" placeholder="From Where?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
             <datalist id="browsers"> <!-- this is a list of classrooms and facilities-->
-              <option value="SW01 BCIT Entrance"></option>
-              <option value="SW01 3190"></option>
-              <option value="SW03 1750"></option>
-              <option value="SW05 1840"></option>
-              <option value="SW05 1850"></option>
-              <option value="SW09 110"></option>
-              <option value="SE06 107"></option>
-              <option value="SE12 320"></option>
-              <option value="SE06 233"></option>
-              <option value="SE12 309"></option>
-              <option value="SE06 103"></option>
-              <option value="SE12 318"></option>
-              <option value="Tim Hortons"></option>
+              <option value="SW01 3190">
+              <option value="SW03 1750">
+              <option value="SW05 1840">
+              <option value="SW05 1850">
+              <option value="SW09 110">
+              <option value="SE06 107">
+              <option value="SE12 320">
+              <option value="SE06 233">
+              <option value="SE12 309">
+              <option value="SE06 103">
+              <option value="SE12 318">
+              <option value="Tim Hortons">
             </datalist>
           </form>
         </div>
@@ -91,18 +87,18 @@
             <form action="/action_page.php" method="get">
                 <input list="browsers" name="browser" placeholder="Where To?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
                 <datalist id="browsers"> <!-- this is a list of classrooms and facilities-->
-                    <option value="SW01 3190"></option>
-                    <option value="SW03 1750"></option>
-                    <option value="SW05 1840"></option>
-                    <option value="SW05 1850"></option>
-                    <option value="SW09 110"></option>
-                    <option value="SE06 107"></option>
-                    <option value="SE12 320"></option>
-                    <option value="SE06 233"></option>
-                    <option value="SE12 309"></option>
-                    <option value="SE06 103"></option>
-                    <option value="SE12 318"></option>
-                    <option value="Tim Hortons"></option>
+                    <option value="SW01 3190">
+                    <option value="SW03 1750">
+                    <option value="SW05 1840">
+                    <option value="SW05 1850">
+                    <option value="SW09 110">
+                    <option value="SE06 107">
+                    <option value="SE12 320">
+                    <option value="SE06 233">
+                    <option value="SE12 309">
+                    <option value="SE06 103">
+                    <option value="SE12 318">
+                    <option value="Tim Hortons">
                 </datalist>
               </form>
         </div>
@@ -122,7 +118,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="js/index.js"> </script>
+    <script src="scripts/firebase_api_carly.js"> </script>
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
