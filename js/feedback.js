@@ -1,12 +1,3 @@
-//---------------------------------------------------------
-// Enables the "Save List" option in the navbar upon login
-//---------------------------------------------------------
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        document.getElementById("savelist").classList.remove("disabled");
-    }
-});
-
 
 
 document.getElementById("one").addEventListener("click", function () {
@@ -61,3 +52,13 @@ document.getElementById("one").addEventListener("click", function () {
             document.getElementById('five').classList.add("unchecked");
         }
     });
+
+//---------------------------------------------------------
+// Enables the "Save List" option in the navbar upon login
+//---------------------------------------------------------
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        document.getElementById("savelist").classList.remove("disabled");
+    }
+});
+
