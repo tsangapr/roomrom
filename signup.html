@@ -83,7 +83,7 @@
           var emailaddress = document.getElementById("emailAddress").value; // get the email address
           console.log(emailaddress);
           //console.log(pw);
-          db.collection("userAccount").doc("Accounts").set({
+          db.collection("users").doc("Accounts").set({
             value: emailaddress
           })
         })
