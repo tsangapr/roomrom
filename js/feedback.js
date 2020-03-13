@@ -1,3 +1,14 @@
+//---------------------------------------------------------
+// Enables the "Save List" option in the navbar upon login
+//---------------------------------------------------------
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        document.getElementById("savelist").classList.remove("disabled");
+    }
+});
+
+
+
 document.getElementById("one").addEventListener("click", function () {
     
     if (document.getElementById('one').classList.contains("unchecked")) {
