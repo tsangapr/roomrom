@@ -1,8 +1,5 @@
 document.getElementById("one").addEventListener("click", function () {
     
-
-    console.log("clicked!")
-
     if (document.getElementById('one').classList.contains("unchecked")) {
         document.getElementById('one').classList.remove("unchecked");
         document.getElementById('one').classList.add("checked");
@@ -13,9 +10,6 @@ document.getElementById("one").addEventListener("click", function () {
 });   
 
     document.getElementById("two").addEventListener("click", function () {
-    
-
-        console.log("clicked!")
 
         if (document.getElementById('two').classList.contains("unchecked")) {
             document.getElementById('two').classList.remove("unchecked");
@@ -26,9 +20,6 @@ document.getElementById("one").addEventListener("click", function () {
         }
     });
     document.getElementById("three").addEventListener("click", function () {
-    
-
-        console.log("clicked!")
 
         if (document.getElementById('three').classList.contains("unchecked")) {
             document.getElementById('three').classList.remove("unchecked");
@@ -39,9 +30,6 @@ document.getElementById("one").addEventListener("click", function () {
         }
     });
     document.getElementById("four").addEventListener("click", function () {
-    
-
-        console.log("clicked!")
 
         if (document.getElementById('four').classList.contains("unchecked")) {
             document.getElementById('four').classList.remove("unchecked");
@@ -53,9 +41,6 @@ document.getElementById("one").addEventListener("click", function () {
     });
 
     document.getElementById("five").addEventListener("click", function () {
-    
-
-        console.log("clicked!")
 
         if (document.getElementById('five').classList.contains("unchecked")) {
             document.getElementById('five').classList.remove("unchecked");
