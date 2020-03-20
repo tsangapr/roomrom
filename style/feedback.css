@@ -5,8 +5,9 @@ h1 {
 }
 
 
-#heading {
+#nonuserheading, #userheading {
     text-decoration: none;
+
 }
 
 

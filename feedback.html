@@ -22,21 +22,28 @@
     <!------------------------>
     <!-- <link rel="stylesheet" href="style/login.css"> -->
     <link rel="stylesheet" href="style/feedback.css">
-    <link rel="import" href="feedback_thanks.html">
+    <!-- <link rel="import" href="feedback_thanks.html"> -->
 
 </head>
 <body>
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
+    <div id="nonuser">
+      <a id="nonuserheading" href="index.html"><h1>RoomRoomRun</h1></a>
+      <a id="login" href="login.html"><button type="button" class="btn btn-outline-primary">Log in</button></a>
+    </div>
+    
+  </br>
+    
+<div id="user">
+    <a id="userheading" href="main.html">
+    <h1>RoomRoomRun</h1>
+    </a>
+    <!-- <p>Welcome Back,  </p> firebase account name -->
+    <p id="afterlogin">Welcome back, <span id="name">Friend</span></p> 
+  </div>
 
-    <a id="heading" href="index.html">
-        <h1>RoomRoomRun</h1>
-        </a>
-        <a id="login" href="login.html">
-        <button type="button" class="btn btn-outline-primary">Log in</button>
-        </a>
-    </br>
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="index.html">Menu</a>
@@ -106,17 +113,21 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="scripts/firebase_api_carly.js"> </script>
+    <script src="js/firebase_api_roomroomrun.js"> </script>
+
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="js/feedback.js"></script>
+    <script src="js/index.js"> </script>
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
+    <script>
+          showName();
+          // showHeader();
 
-
+    </script>
 </body>
 </html>                            
