@@ -29,7 +29,24 @@ function showName() {
   });
 }
 
-
+// ---------------------------------------------
+// From main page, when submit button is clicked, 
+// (get the id=fromBrowser and the id=toBrower, concatenate them together
+// and compare to what is in the database in order to pull out the 
+// document containing the reference(link) to the appropriate direction page.)
+//
+// href="link" with link replaced by the contents 
+// ---------------------------------------------
+db.collection("users").doc(user.uid)
+.collection("route-history").
+.get(function(snap){
+     console.log (snap.data());  // a list of document
+     snap.forEach(function(doc){
+          console.log (doc.data())  // a doc/route
+          //display at element 
+          // inner.HTML = doc.data().name    //display se12tosw6
+     })
+})
 
 
 // // ---------------------------------------------
