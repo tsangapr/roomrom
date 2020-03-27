@@ -37,16 +37,38 @@ function showName() {
 //
 // href="link" with link replaced by the contents 
 // ---------------------------------------------
-db.collection("users").doc(user.uid)
-.collection("route-history").
-.get(function(snap){
-     console.log (snap.data());  // a list of document
-     snap.forEach(function(doc){
-          console.log (doc.data())  // a doc/route
-          //display at element 
-          // inner.HTML = doc.data().name    //display se12tosw6
-     })
-})
+
+function setAddListener() {
+  document.getElementById("submit").addEventListener("click", function (e) {
+
+    //---------------------------
+    // Event Handler begins here
+    //---------------------------
+    firebase.auth().onAuthStateChanged(function (Navigators) {
+      var routeRef = db.collection('Routes').doc(routes.link);
+      console.log(routeRef);
+
+    });
+
+    //----------------------
+    // End of event handling
+    //----------------------
+
+
+  });
+  }
+
+
+// db.collection("users").doc(user.uid)
+// .collection("route-history").
+// get(function(snap){
+//      console.log (snap.data());  // a list of document
+//      snap.forEach(function(doc){
+//           console.log (doc.data())  // a doc/route
+//           //display at element 
+//           // inner.HTML = doc.data().name    //display se12tosw6
+//      })
+// })
 
 
 // // ---------------------------------------------

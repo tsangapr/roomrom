@@ -61,48 +61,27 @@
 </br>
 </br>
 <div>
-    <form>
+      <form action="/action_page.php" method="get">
         <div id="fromwhere" class="form-group">
-          <form action="/action_page.php" method="get">
-            <input list="browsers" name="browser" placeholder="From Where?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
-            <datalist id="browsers"> <!-- this is a list of classrooms and facilities-->
-              <option value="SW01 BCIT Entrance">
-              <option value="SW01 3190">
-              <option value="SW03 1750">
-              <option value="SW05 1840">
-              <option value="SW05 1850">
-              <option value="SW09 110">
-              <option value="SE06 107">
-              <option value="SE12 320">
-              <option value="SE06 233">
-              <option value="SE12 309">
-              <option value="SE06 103">
-              <option value="SE12 318">
-              <option value="Tim Hortons">
-            </datalist>
-          </form>
+            <select id="from" > <!-- this is a list of classrooms and facilities-->
+              <option value="SW01BCITEntrance">SW01 BCIT Entrance</option>
+              <option value="SW013190">SW01 3190</option>
+              <option value="SW031750">SW03 1750</option>
+              <option value="SW051840">SW05 1840</option>
+              <option value="SW051850">SW05 1850</option>
+            </select>
         </div>
         <input id="submit" type="submit">
 
+
         <div id="towhere" class="form-group">
-            <form action="/action_page.php" method="get">
-                <input list="browsers" name="browser" placeholder="Where To?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
-                <datalist id="browsers"> <!-- this is a list of classrooms and facilities-->
-                    <option value="SW01 BCIT Entrance">
-                    <option value="SW01 3190">
-                    <option value="SW03 1750">
-                    <option value="SW05 1840">
-                    <option value="SW05 1850">
-                    <option value="SW09 110">
-                    <option value="SE06 107">
-                    <option value="SE12 320">
-                    <option value="SE06 233">
-                    <option value="SE12 309">
-                    <option value="SE06 103">
-                    <option value="SE12 318">
-                    <option value="Tim Hortons">
-                </datalist>
-              </form>
+              <select id="to" > <!-- this is a list of classrooms and facilities-->
+                <option value="SW01BCITEntrance">SW01 BCIT Entrance</option>
+                <option value="SW013190">SW01 3190</option>
+                <option value="SW031750">SW03 1750</option>
+                <option value="SW051840">SW05 1840</option>
+                <option value="SW051850">SW05 1850</option>
+              </select>
         </div>
     </form>
 </div>
