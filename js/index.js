@@ -24,7 +24,7 @@ firebase.auth().onAuthStateChanged(function(Navigators) {
 // ---------------------------------------------
 function showName() {
   firebase.auth().onAuthStateChanged(function (Navigators) {
-    console.log(Navigators);
+    // console.log(Navigators);
     document.getElementById("name").innerHTML = Navigators.displayName;
   });
 }
@@ -38,25 +38,55 @@ function showName() {
 // href="link" with link replaced by the contents 
 // ---------------------------------------------
 
+
+
 function setAddListener() {
   document.getElementById("submit").addEventListener("click", function (e) {
+    var origin = document.getElementById("from").value;
+    var destination = document.getElementById("to").value;
+    var newPage = origin + "_" + destination + ".html";
+    document.getElementById("testTo").innerHTML = origin;
+    document.getElementById("testDest").innerHTML = destination;
+   
+    var routeObject = {
+      name: newPage,
+      time: firebase.firestore.FieldValue.serverTimestamp()    
+    }
 
-    //---------------------------
-    // Event Handler begins here
-    //---------------------------
-    firebase.auth().onAuthStateChanged(function (Navigators) {
-      var routeRef = db.collection('Routes').doc(routes.link);
-      console.log(routeRef);
+    firebase.auth().onAuthStateChanged(function(Navigators) {
+    db.collection("users").doc(user.uid)
+    .collection("history")
+    .add("routeObject") //auto gen id
+    .then(function() {
+      window.location.replace(newPage);
 
-    });
-
-    //----------------------
-    // End of event handling
-    //----------------------
-
-
-  });
+    }
+  );
   }
+    );
+  
+//History page
+function getHistory() {
+  firebase.auth().onAuthStateChanged(function(Navigators){
+    db.collection("users").doc(user.uid)
+    .collection("history")
+    .get()
+    .then(function(snap){
+      snap.forEach(function(doc){
+        var n = doc.data().name;
+        console.log
+  
+        //create dynamic elements to show 
+        //name and/or time
+        //create a like button
+        //when clicked, increment the "rate"
+      });
+      }
+
+      );
+      }
+      );
+      }
 
 
 // db.collection("users").doc(user.uid)
@@ -97,4 +127,4 @@ function setAddListener() {
 //   });
 // }
 
-  
+

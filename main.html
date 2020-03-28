@@ -61,8 +61,8 @@
 </br>
 </br>
 <div>
-      <form action="/action_page.php" method="get">
-        <div id="fromwhere" class="form-group">
+      <form>
+        <!-- <div id="fromwhere" class="form-group"> -->
             <select id="from" > <!-- this is a list of classrooms and facilities-->
               <option value="SW01BCITEntrance">SW01 BCIT Entrance</option>
               <option value="SW013190">SW01 3190</option>
@@ -70,11 +70,10 @@
               <option value="SW051840">SW05 1840</option>
               <option value="SW051850">SW05 1850</option>
             </select>
-        </div>
-        <input id="submit" type="submit">
+        <!-- </div> -->
 
 
-        <div id="towhere" class="form-group">
+        <!-- <div id="towhere" class="form-group"> -->
               <select id="to" > <!-- this is a list of classrooms and facilities-->
                 <option value="SW01BCITEntrance">SW01 BCIT Entrance</option>
                 <option value="SW013190">SW01 3190</option>
@@ -82,8 +81,15 @@
                 <option value="SW051840">SW05 1840</option>
                 <option value="SW051850">SW05 1850</option>
               </select>
-        </div>
+        <!-- </div> -->
+
+
     </form>
+
+    <button id="submit" type="button" onclick="setAddListener()">Submit</button>
+
+      <p id = "testTo"></p>
+      <p id = "testDest"></p>
 </div>
 
     <!----------------------------------------------->
