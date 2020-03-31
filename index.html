@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>RoomRoomRun</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="viewpoint" content="width=device-wdith, initial-scale=1.0">
     <meta name="author" content="BCIT">
 
     <!----------------------------------------------->
@@ -27,23 +28,86 @@
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-
+    <a id="heading" href="index.html">
     <h1>RoomRoomRun</h1>
-    <a href="login.html">
-    <button id="login" type="button" class="btn btn-outline-primary">Log in</button>
+    </a>
+    <a id="login" href="login.html">
+    <button type="button" class="btn btn-outline-primary">Log in</button>
     </a>
 </br>
 </br>
-</br>
+<nav id="menubar" class="navbar navbar-expand-lg navbar-light bg-light">
+  <a id="menu" class="navbar-brand" href="index.html">Menu</a>
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="navbar-collapse collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a id="home" class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <div class="popup" onclick="popup()">
+      <li class="nav-item">
+        <a id="savelist" class="nav-link disabled" href="savelist.html" >Save List</a>
+        <span class="popuptext" id="myPopup">Log in to see saved route!</span>
+      </li>
+    </div>
+      <li class="nav-item">
+        <a id="issuereport" class="nav-link" href="feedback.html">Give Feedback/Report an Issue</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+</br>
+</br>
+<div>
     <form>
-        <div class="form-group">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Where are you?">
+        <div id="fromwhere" class="form-group">
+          <form action="/action_page.php" method="get">
+            <input list="browsers" name="browser" placeholder="From Where?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
+            <datalist id="browsers"> <!-- this is a list of classrooms and facilities-->
+              <option value="SW01 BCIT Entrance"></option>
+              <option value="SW01 3190"></option>
+              <option value="SW03 1750"></option>
+              <option value="SW05 1840"></option>
+              <option value="SW05 1850"></option>
+              <option value="SW09 110"></option>
+              <option value="SE06 107"></option>
+              <option value="SE12 320"></option>
+              <option value="SE06 233"></option>
+              <option value="SE12 309"></option>
+              <option value="SE06 103"></option>
+              <option value="SE12 318"></option>
+              <option value="Tim Hortons"></option>
+            </datalist>
+          </form>
         </div>
-        <div class="form-group">
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Where To?">
+        <input id="submit" type="submit">
+
+        <div id="towhere" class="form-group">
+            <form action="/action_page.php" method="get">
+                <input list="browsers" name="browser" placeholder="Where To?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
+                <datalist id="browsers"> <!-- this is a list of classrooms and facilities-->
+                    <option value="SW01 3190"></option>
+                    <option value="SW03 1750"></option>
+                    <option value="SW05 1840"></option>
+                    <option value="SW05 1850"></option>
+                    <option value="SW09 110"></option>
+                    <option value="SE06 107"></option>
+                    <option value="SE12 320"></option>
+                    <option value="SE06 233"></option>
+                    <option value="SE12 309"></option>
+                    <option value="SE06 103"></option>
+                    <option value="SE12 318"></option>
+                    <option value="Tim Hortons"></option>
+                </datalist>
+              </form>
         </div>
-      </form>
+    </form>
+</div>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -58,12 +122,11 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="scripts/firebase_api_carly.js"> </script>
   
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="scripts/script.js"></script>
+    <script src="js/index.js"> </script>
 
      <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
