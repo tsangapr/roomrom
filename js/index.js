@@ -91,16 +91,28 @@ function setAddListener() {
 //
 //
 //-----------------------------------------------------------------
+
 function getHistory() {
+
   firebase.auth().onAuthStateChanged(function(user){
     db.collection("Navigators").doc(user.uid)
     .collection("history")
     .get()
     .then(function(snap){
-      snap.forEach(function(doc){
-        var n = doc.data().name;
-        console.log
-  
+      snap.forEach(function (doc) {
+        let nameHistory = doc.data().name
+        // let doesThisWork = nameHistory.innerHTML = "agwagwaga";
+        let timeHistory = doc.data().time.toDate();
+        let nameTimeHistory = (nameHistory + " --- " + timeHistory);
+        let paragraphNameTime = document.createElement("p");
+        // let link = document.createElement("a");
+        document.getElementById("displayHistory").appendChild(paragraphNameTime);
+        let nodeName = document.createTextNode(nameTimeHistory);
+        paragraphNameTime.appendChild(nodeName);
+        // link.prepend(nodeName);
+        // link.href= "https://www.google.ca";
+      
+        // console.log(doesThisWork);
         //create dynamic elements to show 
         //name and/or time
         //create a like button
