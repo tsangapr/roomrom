@@ -53,7 +53,13 @@ function setAddListener() {
   document.getElementById("submit").addEventListener("click", function (e) {
     var origin = document.getElementById("from").value;
     var destination = document.getElementById("to").value;
+    if (origin == destination) {
+      // var newPage = "error_page.html";
+      document.getElementById("testTo").innerHTML = "Please pick different locations";
+
+    } else {
     var newPage = origin + "_" + destination + ".html";
+    }
     document.getElementById("testTo").innerHTML = origin;
     document.getElementById("testDest").innerHTML = destination;
 
@@ -78,12 +84,7 @@ function setAddListener() {
   });
 });
 }
-//------------------------------------------------------------
-//
-//-------------End of function setAddlistener()----------------
-//
-//--------------------------------------------------------------
-  
+
 
 
 //----------------------------------------------------------------
