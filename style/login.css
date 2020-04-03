@@ -1,4 +1,21 @@
-#signintitle {
+h1 {
+    text-align: center;
+    font-size: 11vh;
+    color: dodgerblue; 
+}
+
+#heading {
+    text-decoration: none;
+}
+
+#login {
+    margin-left: 90%;
+    font-size: 3vh;
+    
+}
+
+
+/* #signintitle {
     text-align: center;
     margin-top: 10%;
     font-size: 6vh;
@@ -52,5 +69,5 @@
     top: 0%;
     right: 10%;
 
-}
+} */
 

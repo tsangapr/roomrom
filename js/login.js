@@ -1,5 +1,5 @@
 // Get the modal
-var modal = document.getElementById('noaccount');
+var modal = document.getElementById('myform');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {

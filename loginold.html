@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>RoomRoomRun</title>
+    <title>RoomRoomRun/Signin</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="viewpoint" content="width=device-wdith, initial-scale=1.0">
     <meta name="author" content="BCIT">
@@ -21,80 +20,35 @@
     <!------------------------>
     <!-- Your own CSS files -->
     <!------------------------>
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="import" href="login.html">
+    <link rel="stylesheet" href="style/login.css">
 
+</head>
 <body>
     <!----------------------->
     <!--  HTML Section -->
     <!----------------------->
-    <a id="heading" href="main.html"></a>
-    <h1>RoomRoomRun</h1>
-    </a>
-    <!-- <p>Welcome Back,  </p> firebase account name -->
-    <p id="afterlogin">Welcome back, <span id="name">Friend</span></p> <!--user name after welcome back message-->
-   
-</br>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a id="menu" class="navbar-brand" href="main.html">Menu</a>
-  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="navbar-collapse collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a id="home" class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a id="savelist" class="nav-link enabled" href="savelist.html" >Save List</a>
-      </li>
-      <li class="nav-item">
-        <a id="issuereport" class="nav-link" href="feedback.html">Give Feedback/Report an Issue</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-
-</br>
-</br>
-
-
-<div>
-<h1> History </h1>
-<p id = "displayHistory"></p>
-
-
-
-</div>
-
-
-<!-- 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Saved Route</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr id="userRoute">
-            <td>
-                <a id="routes" href="SW01BCITEntrance_SW013190.html"> route data from collections? ex. SW01BCITEntrance to SW013190
-            </td>
-
-
-        </tr>
-
-    </tbody>
-</table>
-         -->
-
+    <p id="roomroomrun">RoomRoomrun</p>
+    <p id="signintitle">Sign in</p>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
+
+    <form>
+        <div id="usernamebox" class="form-group">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="user name">
+        </div>
+        <div id="passwordbox" class="form-group">
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+        </div>
+        <div id="rememberme"class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Remember me</label>
+        </div>
+        <button id="signin" type="submit" class="btn btn-primary">Log in</button>
+      </form>
+      <p id="noaccount">Don't have an account? <a href="signup.html">Sign Up</a></p>
+      <a href="password.html"><p id="nopassword">forgot your password?</p></a>
 
     
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -105,21 +59,17 @@
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="js/firebase_api_roomroomrun.js"> </script>
-
-  
+    <script src="js/login.js"> </script>
+  s
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
-    <script src="js/index.js"> </script>
+    
 
-     <!--------------------------------------------------------------------->
+    <!--------------------------------------------------------------------->
     <!-- Make calls to your own JavaScript functions, here below-->
     <!---------------------------------------------------------------------->
-    <script>
-          showName();
-          getHistory();
 
-    </script>
+
 </body>
 </html>                            

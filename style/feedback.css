@@ -5,8 +5,9 @@ h1 {
 }
 
 
-#heading {
+#nonuserheading, #userheading {
     text-decoration: none;
+
 }
 
 
@@ -16,7 +17,7 @@ h1 {
     
 }
 
-.feedback-end {
+#startnew {
     margin-left: 10%;
 }
 
@@ -39,6 +40,7 @@ margin-right: auto;
 
 .stars {
     text-align: center;
+    cursor:pointer;
 }
 
 .checked {
