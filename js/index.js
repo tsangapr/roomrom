@@ -42,7 +42,7 @@ function showName() {
 
 
 // ---------------------------------------------
-// From main page, when submit button is clicked, 
+// From index or main page, when submit button is clicked, 
 // (get the id=fromBrowser and the id=toBrower, concatenate them together
 // and compare to what is in the database in order to pull out the 
 // document containing the reference(link) to the appropriate direction page.)
@@ -83,6 +83,17 @@ function setAddListener() {
     });
   });
 });
+}
+
+function setAddListener2() {
+  var origin2 = document.getElementsByName('browser1')[0];
+  var destination2 = document.getElementsByName('browser2')[0];
+  origin2.addEventListener('input', function() {
+    document.getElementById("fromresult").innerHTML = this.value;
+  })
+  destination2.addEventListener('input', function() {
+    document.getElementById("toresult").innerHTML = this.value;
+  })
 }
 
 

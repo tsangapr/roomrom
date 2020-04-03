@@ -36,7 +36,7 @@
     </a>
 </br>
 </br>
-<nav id="menubar" class="navbar navbar-expand-lg navbar-light bg-light">
+<nav id="menubar" class="navbar navbar-expand-lg navbar-default">
   <a id="menu" class="navbar-brand" href="index.html">Menu</a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -67,8 +67,8 @@
     <form>
         <div id="fromwhere" class="form-group">
           <form action="/action_page.php" method="get">
-            <input list="browsers" name="browser" placeholder="From Where?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
-            <datalist id="browsers"> <!-- this is a list of classrooms and facilities-->
+            <input list="browsers" name="browser1" placeholder="From Where?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
+            <datalist id="browsers" id="from"> <!-- this is a list of classrooms and facilities-->
               <option value="SW01 BCIT Entrance"></option>
               <option value="SW01 3190"></option>
               <option value="SW03 1750"></option>
@@ -85,12 +85,11 @@
             </datalist>
           </form>
         </div>
-        <input id="submit" type="submit">
 
         <div id="towhere" class="form-group">
             <form action="/action_page.php" method="get">
-                <input list="browsers" name="browser" placeholder="Where To?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
-                <datalist id="browsers"> <!-- this is a list of classrooms and facilities-->
+                <input list="browsers" name="browser2" placeholder="Where To?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
+                <datalist id="browsers" id="to"> <!-- this is a list of classrooms and facilities-->
                     <option value="SW01 3190"></option>
                     <option value="SW03 1750"></option>
                     <option value="SW05 1840"></option>
@@ -107,7 +106,10 @@
               </form>
         </div>
     </form>
+    <input id="submit" type="submit" onclick= "setAddListener2()">
 </div>
+<p id = "fromresult"></p>
+<p id = "toresult"></p>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
