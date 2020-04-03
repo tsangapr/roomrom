@@ -103,7 +103,7 @@ function getHistory() {
     .get()
     .then(function(snap){
       snap.forEach(function (doc) {
-        let nameHistory = doc.data().name
+        let nameHistory = doc.data().name;
         // let doesThisWork = nameHistory.innerHTML = "agwagwaga";
         let timeHistory = doc.data().time.toDate();
         let nameTimeHistory = (nameHistory + " --- " + timeHistory);
