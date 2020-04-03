@@ -101,15 +101,25 @@ function getHistory() {
     .get()
     .then(function(snap){
       snap.forEach(function (doc) {
-        let nameHistory = doc.data().name
-        // let doesThisWork = nameHistory.innerHTML = "agwagwaga";
+        let nameHistory = doc.data().name;
         let timeHistory = doc.data().time.toDate();
         let nameTimeHistory = (nameHistory + " --- " + timeHistory);
         let paragraphNameTime = document.createElement("p");
-        // let link = document.createElement("a");
+        paragraphNameTime.setAttribute("id", nameHistory);
         document.getElementById("displayHistory").appendChild(paragraphNameTime);
         let nodeName = document.createTextNode(nameTimeHistory);
         paragraphNameTime.appendChild(nodeName);
+        console.log(nameHistory);
+        console.log(paragraphNameTime);
+        console.log("id");
+        $(nameHistory).click(function () {
+          alert("in handler!" + nameHistory + " was clicked!");
+          window.location.replace(nameHistory);
+        // $("#" + nameHistory).click(function () {
+        //   window.location.replace(doc.data().name + ".html")
+        });
+
+
         // link.prepend(nodeName);
         // link.href= "https://www.google.ca";
       
