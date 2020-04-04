@@ -121,6 +121,8 @@ function getHistory() {
         document.getElementById("displayHistory").appendChild(paragraphNameTime);
         let nodeName = document.createTextNode(nameTimeHistory);
         paragraphNameTime.appendChild(nodeName);
+        //$("#" + nameHistory).click(function () {
+          //window.location.replace(nameHistory);
         // link.prepend(nodeName);
         // link.href= "https://www.google.ca";
       
