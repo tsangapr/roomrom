@@ -7,7 +7,7 @@
 h1 {
     text-align: center;
     font-size: 11vh;
-    color: dodgerblue; 
+    color: #089cff;  
 }
 
 #heading {
@@ -47,10 +47,21 @@ h1 {
 
 #savelist {
     font-size: 1.5vw;
-    color: black;
 }
 
 #issuereport {
     font-size: 1.5vw;
-    color: black;
+}
+
+.navbar-default {
+    color: #7eb1f4;
+    background-color: #7eb1f4;
+}
+
+body {
+    background-color: #b2c6e9;
+}
+
+#submit {
+    background-color: #dddddd;
 }

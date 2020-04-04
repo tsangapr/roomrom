@@ -53,7 +53,13 @@ function setAddListener() {
   document.getElementById("submit").addEventListener("click", function (e) {
     var origin = document.getElementById("from").value;
     var destination = document.getElementById("to").value;
+    if (origin == destination) {
+      // var newPage = "error_page.html";
+      document.getElementById("testTo").innerHTML = "Please pick different locations";
+
+    } else {
     var newPage = origin + "_" + destination + ".html";
+    }
     document.getElementById("testTo").innerHTML = origin;
     document.getElementById("testDest").innerHTML = destination;
 
@@ -78,12 +84,7 @@ function setAddListener() {
   });
 });
 }
-//------------------------------------------------------------
-//
-//-------------End of function setAddlistener()----------------
-//
-//--------------------------------------------------------------
-  
+
 
 
 //----------------------------------------------------------------
@@ -92,25 +93,31 @@ function setAddListener() {
 //
 //-----------------------------------------------------------------
 function getHistory() {
-  firebase.auth().onAuthStateChanged(function(user){
+  firebase.auth().onAuthStateChanged(function (user) {
     db.collection("Navigators").doc(user.uid)
-    .collection("history")
-    .get()
-    .then(function(snap){
-      snap.forEach(function(doc){
-        var n = doc.data().name;
-        console.log
-  
-        //create dynamic elements to show 
-        //name and/or time
-        //create a like button
-        //when clicked, increment the "rate"
-      });
+      .collection("history")
+      .get()
+      .then(function (snap) {
+        snap.forEach(function (doc) {
+          let nameHistory = doc.data().name;
+          let userHistoryId = doc.id;
+          let timeHistory = doc.data().time.toDate();
+          let nameTimeHistory = (nameHistory + " --- " + timeHistory);
+          let paragraphNameTime = document.createElement("p");
+          paragraphNameTime.setAttribute("id", userHistoryId)
+          document.getElementById("displayHistory").appendChild(paragraphNameTime);
+          let nodeName = document.createTextNode(nameTimeHistory);
+          paragraphNameTime.appendChild(nodeName);
+          $("#" + userHistoryId).click(function () {
+            window.location.replace(nameHistory);
+
+          });
+        });
       }
       );
-      }
-      );
-      }
+  }
+  );
+}
 //--------------------------------------------------------------------
 //------------------End of function getHistory()---------------------
 //---------------------------------------------------------------------
