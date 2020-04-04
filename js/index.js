@@ -115,10 +115,7 @@ function getHistory() {
     .then(function(snap){
       snap.forEach(function (doc) {
         let nameHistory = doc.data().name;
-<<<<<<< HEAD
         // let doesThisWork = nameHistory.innerHTML = "agwagwaga";
-=======
->>>>>>> room_room_branch_victor
         let timeHistory = doc.data().time.toDate();
         let nameTimeHistory = (nameHistory + " --- " + timeHistory);
         let paragraphNameTime = document.createElement("p");
