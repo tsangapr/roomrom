@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BCIT ENTRANCE - SW01 1750</title>
+  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="author" content="BCIT">
+
+  <!----------------------------------------------->
+  <!--  Meta tag for rendering on mobile devices -->
+  <!----------------------------------------------->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!----------------------------------------------->
+  <!-- CSS: Bootstrap, Firebase, other API -->
+  <!----------------------------------------------->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <!------------------------>
+  <!-- Your own CSS files -->
+  <!------------------------>
+  <link rel="stylesheet" href="style/direction.css">
+  <!-- <link rel="import" href="login.html"> -->
+
+
+<body>
+  <!----------------------->
+  <!--  HTML Section -->
+  <!-- --------------------->
+
+
+  <!-- <a id="heading" href="main.html">
+    <h1>RoomRoomRun</h1>
+  </a> -->
+  <!-- <a id="login" href="login.html">
+    <button type="button" class="btn btn-outline-primary">Log in</button>
+  </a> -->
+
+  <div id="user">
+    <a id="userheading" href="main.html">
+    <h1>RoomRoomRun</h1>
+    </a>
+    <!-- <p>Welcome Back,  </p> firebase account name -->
+    <p id="afterlogin">Welcome back, <span id="name">Friend</span></p> 
+  </div>
+
+  </br>
+  <a href="feedback.html">
+    <input id="hoverFeedback" type="button" value="Click Here To Proceed" title="Thank You!"></a>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Menu</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="savelist.html">Save List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">Give Feedback/Report an Issue</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  </br>
+
+  <div class="container-fluid">
+    <h1 class="title"> BCIT ENTRANCE - SW03 1750</h1>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-3">
+          <h1 class="title">Text Instructions</h1>
+          <p class="direction">
+            Enter the BCIT Entrance and walk towards the stage.
+
+          </p>
+
+        </div>
+        <div class="col-9">
+          <img class="img-fluid" src="images/construction.png">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+        <h1 class="title">Text Instructions</h1>
+        <p class="direction">
+          Turn right and exit the doors in front of you.
+        </p>
+
+      </div>
+      <div class="col-9">
+        <img class="img-fluid" src="images/construction.png">
+
+      </div>
+    </div>
+  </div>
+  </br>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+        <h1 class="title">Text Instructions</h1>
+        <p class="direction">
+          Walk straight towards the entrance of the SW03 building.
+        </p>
+
+      </div>
+      <div class="col-9">
+        <img class="img-fluid" src="images/construction.png">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+        <h1 class="title">Text Instructions</h1>
+        <p class="direction">
+          Go through the SW03 building and enter the SW05 building in front of you.
+        </p>
+
+      </div>
+      <div class="col-9">
+        <img class="img-fluid" src="images/construction.png">
+
+      </div>
+    </div>
+  </div>
+
+  </br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-3">
+        <h1 class="title">Text Instructions</h1>
+        <p class="direction">
+          Your classroom is on the right.
+        </p>
+
+      </div>
+      <div class="col-9">
+        <img class="img-fluid" src="images/construction.png">
+
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <img class="img-fluid" id="snorlax" src="images/snorlax.jpg">
+    <h1>You Have Arrived!</h1>
+  </div>
+
+  <!----------------------------------------------->
+  <!-- JS: Boostrap, Firebase, API related    -->
+  <!----------------------------------------------->
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="js/firebase_api_roomroomrun.js"> </script>
+
+  
+  <!--------------------------------------------------------------------->
+  <!-- JS files: Your own JavaScript functions included here    -->
+  <!--------------------------------------------------------------------->
+  <script src="js/index.js"> </script>
+  <script src="js/direction.js"></script>
+
+  <!--------------------------------------------------------------------->
+  <!-- Make calls to your own JavaScript functions, here below-->
+  <!---------------------------------------------------------------------->
+
+
+</body>
