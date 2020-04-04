@@ -14,15 +14,14 @@ h1 {
     text-decoration: none;
 }
 
-#fromwhere {
+#from {
     float: left;
     margin-left: 15%;
     width: 30vw;
     margin-top: 5vh;
-    height: 30vh;
 }
 
-#towhere {
+#to {
     float: right;
     margin-right: 15%;
     width: 30vw;
@@ -62,6 +61,13 @@ body {
     background-color: #b2c6e9;
 }
 
+
 #submit {
     background-color: #dddddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 5vw;
+    height: 5vh;
+    
 }
