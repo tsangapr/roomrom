@@ -42,7 +42,7 @@ function showName() {
 
 
 // ---------------------------------------------
-// From index or main page, when submit button is clicked, 
+// From main page, when submit button is clicked, 
 // (get the id=fromBrowser and the id=toBrower, concatenate them together
 // and compare to what is in the database in order to pull out the 
 // document containing the reference(link) to the appropriate direction page.)
@@ -60,10 +60,8 @@ function setAddListener() {
     } else {
     var newPage = origin + "_" + destination + ".html";
     }
-
-    //testing
-    // document.getElementById("testTo").innerHTML = origin;
-    // document.getElementById("testDest").innerHTML = destination;
+    document.getElementById("testTo").innerHTML = origin;
+    document.getElementById("testDest").innerHTML = destination;
 
 //------------------------------------------------------------------------
 //When a logged-in user selects an orgin, then selects a destination,
@@ -87,17 +85,6 @@ function setAddListener() {
 });
 }
 
-function setAddListener2() {
-  var origin2 = document.getElementsByName('browser1')[0];
-  var destination2 = document.getElementsByName('browser2')[0];
-  origin2.addEventListener('input', function() {
-    document.getElementById("fromresult").innerHTML = this.value;
-  })
-  destination2.addEventListener('input', function() {
-    document.getElementById("toresult").innerHTML = this.value;
-  })
-}
-
 
 
 //----------------------------------------------------------------
@@ -105,49 +92,32 @@ function setAddListener2() {
 //
 //
 //-----------------------------------------------------------------
-
 function getHistory() {
-
-  firebase.auth().onAuthStateChanged(function(user){
+  firebase.auth().onAuthStateChanged(function (user) {
     db.collection("Navigators").doc(user.uid)
-    .collection("history")
-    .get()
-    .then(function(snap){
-      snap.forEach(function (doc) {
-        let nameHistory = doc.data().name;
-        // let doesThisWork = nameHistory.innerHTML = "agwagwaga";
-        let timeHistory = doc.data().time.toDate();
-        let nameTimeHistory = (nameHistory + " --- " + timeHistory);
-        let paragraphNameTime = document.createElement("p");
-        paragraphNameTime.setAttribute("id", nameHistory);
-        document.getElementById("displayHistory").appendChild(paragraphNameTime);
-        let nodeName = document.createTextNode(nameTimeHistory);
-        paragraphNameTime.appendChild(nodeName);
-        console.log(nameHistory);
-        console.log(paragraphNameTime);
-        console.log("id");
-        $(nameHistory).click(function () {
-          alert("in handler!" + nameHistory + " was clicked!");
-          window.location.replace(nameHistory);
-        // $("#" + nameHistory).click(function () {
-        //   window.location.replace(doc.data().name + ".html")
+      .collection("history")
+      .get()
+      .then(function (snap) {
+        snap.forEach(function (doc) {
+          let nameHistory = doc.data().name;
+          let userHistoryId = doc.id;
+          let timeHistory = doc.data().time.toDate();
+          let nameTimeHistory = (nameHistory + " --- " + timeHistory);
+          let paragraphNameTime = document.createElement("p");
+          paragraphNameTime.setAttribute("id", userHistoryId)
+          document.getElementById("displayHistory").appendChild(paragraphNameTime);
+          let nodeName = document.createTextNode(nameTimeHistory);
+          paragraphNameTime.appendChild(nodeName);
+          $("#" + userHistoryId).click(function () {
+            window.location.replace(nameHistory);
+
+          });
         });
-
-
-        // link.prepend(nodeName);
-        // link.href= "https://www.google.ca";
-      
-        // console.log(doesThisWork);
-        //create dynamic elements to show 
-        //name and/or time
-        //create a like button
-        //when clicked, increment the "rate"
-      });
       }
       );
-      }
-      );
-      }
+  }
+  );
+}
 //--------------------------------------------------------------------
 //------------------End of function getHistory()---------------------
 //---------------------------------------------------------------------
