@@ -19,6 +19,7 @@ h1 {
     margin-left: 15%;
     width: 30vw;
     margin-top: 5vh;
+    height: 5vh;
 }
 
 #to {
@@ -26,6 +27,7 @@ h1 {
     margin-right: 15%;
     width: 30vw;
     margin-top: 5vh;
+    height: 5vh;
 }
 
 #submit {
