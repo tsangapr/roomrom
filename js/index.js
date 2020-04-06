@@ -115,19 +115,21 @@ function getHistory() {
     .then(function(snap){
       snap.forEach(function (doc) {
         let nameHistory = doc.data().name;
+        let x = doc.id;
         // let doesThisWork = nameHistory.innerHTML = "agwagwaga";
         let timeHistory = doc.data().time.toDate();
         let nameTimeHistory = (nameHistory + " --- " + timeHistory);
         let paragraphNameTime = document.createElement("p");
-        paragraphNameTime.setAttribute("id", nameHistory);
+        paragraphNameTime.setAttribute("id", x);
         document.getElementById("displayHistory").appendChild(paragraphNameTime);
         let nodeName = document.createTextNode(nameTimeHistory);
         paragraphNameTime.appendChild(nodeName);
         console.log(nameHistory);
+        console.log(x);
         console.log(paragraphNameTime);
         console.log("id");
-        $(nameHistory).click(function () {
-          alert("in handler!" + nameHistory + " was clicked!");
+        $("#" + x).click(function () {
+          alert("in handler!" + x + " was clicked!");
           window.location.replace(nameHistory);
         // $("#" + nameHistory).click(function () {
         //   window.location.replace(doc.data().name + ".html")
