@@ -9,6 +9,10 @@ function popup() {
 //--------------------End of function popup()-------------
 //--------------------------------------------------------
 
+function pleaseLogIn() {
+  document.getElementById("indexSubmit").innerHTML = "<br>" + "Please Log In to proceed.";
+}
+
 
 
 //---------------------------------------------------------
