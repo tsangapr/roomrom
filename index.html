@@ -64,52 +64,36 @@
 </br>
 </br>
 <div>
-    <form>
-        <div id="fromwhere" class="form-group">
-          <form action="/action_page.php" method="get">
-            <input list="browsers" name="browser1" placeholder="From Where?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
-            <datalist id="browsers" id="from"> <!-- this is a list of classrooms and facilities-->
-              <option value="SW01 BCIT Entrance"></option>
-              <option value="SW01 3190"></option>
-              <option value="SW03 1750"></option>
-              <option value="SW05 1840"></option>
-              <option value="SW05 1850"></option>
-              <option value="SW09 110"></option>
-              <option value="SE06 107"></option>
-              <option value="SE12 320"></option>
-              <option value="SE06 233"></option>
-              <option value="SE12 309"></option>
-              <option value="SE06 103"></option>
-              <option value="SE12 318"></option>
-              <option value="Tim Hortons"></option>
-            </datalist>
-          </form>
-        </div>
+    <!-- <div id="fromwhere" class="form-group"> -->
+        <select id="from" class="fromwhere" > <!-- this is a list of classrooms and facilities-->
+          <option value="SW01BCITEntrance">SW01 BCIT Entrance</option>
+          <option value="SW011750">SW01 1750</option>
+          <option value="SW031750">SW03 1750</option>
+          <option value="SW051840">SW05 1840</option>
+          <option value="SW051850">SW05 1850</option>
+          <option value="Tim_Hortons">Tim Hortons</option>
+        </select>
+    <!-- </div> -->
 
-        <div id="towhere" class="form-group">
-            <form action="/action_page.php" method="get">
-                <input list="browsers" name="browser2" placeholder="Where To?" style="width: 26vw; height: 7vh; padding-left: 1vw;">
-                <datalist id="browsers" id="to"> <!-- this is a list of classrooms and facilities-->
-                    <option value="SW01 3190"></option>
-                    <option value="SW03 1750"></option>
-                    <option value="SW05 1840"></option>
-                    <option value="SW05 1850"></option>
-                    <option value="SW09 110"></option>
-                    <option value="SE06 107"></option>
-                    <option value="SE12 320"></option>
-                    <option value="SE06 233"></option>
-                    <option value="SE12 309"></option>
-                    <option value="SE06 103"></option>
-                    <option value="SE12 318"></option>
-                    <option value="Tim Hortons"></option>
-                </datalist>
-              </form>
-        </div>
-    </form>
-    <input id="submit" type="submit" onclick= "setAddListener2()">
+
+    <!-- <div id="towhere" class="form-group"> -->
+          <select id="to" class="towhere" > <!-- this is a list of classrooms and facilities-->
+            <option value="SW01BCITEntrance">SW01 BCIT Entrance</option>
+            <option value="SW011750">SW01 1750</option>
+            <option value="SW031750">SW03 1750</option>
+            <option value="SW051840">SW05 1840</option>
+            <option value="SW051850">SW05 1850</option>
+            <option value="TimHortons">Tim Hortons</option>
+          </select>
+    <!-- </div> -->
+
+
+
+<button id="submit" type="button" onclick="setAddListener()">Submit</button>
+
+  <p id = "testTo"></p>
+  <p id = "testDest"></p>
 </div>
-<p id = "fromresult"></p>
-<p id = "toresult"></p>
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
