@@ -63,8 +63,7 @@ function setAddListener() {
     } else {
     var newPage = origin + "_" + destination + ".html";
     }
-    document.getElementById("testTo").innerHTML = origin;
-    document.getElementById("testDest").innerHTML = destination;
+
 
 //------------------------------------------------------------------------
 //When a logged-in user selects an orgin, then selects a destination,
