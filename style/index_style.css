@@ -68,9 +68,34 @@ h1 {
     -ms-user-select: none;
     user-select: none;
   }
+
+.popup1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
   
   /* The actual popup */
   .popup .popuptext {
+    visibility: hidden;
+    width: 20vw;
+    background-color: #dddddd;
+    color: black;
+    text-align: center;
+    border-radius: 0.7vw;
+    padding: 1vw 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 50%;
+    margin-left: -10vw;
+  }
+
+  .popup1 .popuptext1 {
     visibility: hidden;
     width: 20vw;
     background-color: #dddddd;
@@ -96,9 +121,26 @@ h1 {
     border-style: solid;
     border-color: #dddddd transparent transparent transparent;
   }
+
+  .popup1 .popuptext1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #dddddd transparent transparent transparent;
+  }
   
   /* Toggle this class - hide and show the popup */
   .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  .popup1 .show1 {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;

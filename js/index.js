@@ -5,6 +5,11 @@ function popup() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
   }
+
+function popup1() {
+    var popup = document.getElementById("myPopup1");
+    popup.classList.toggle("show1");
+  }
 //--------------------------------------------------------
 //--------------------End of function popup()-------------
 //--------------------------------------------------------
