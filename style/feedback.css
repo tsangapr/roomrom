@@ -1,15 +1,14 @@
 h1 {
     text-align: center;
+    text-align: auto;
     font-size: 11vh;
     color:#089cff;  
 }
-
 
 #nonuserheading, #userheading, #heading {
     text-decoration: none;
 
 }
-
 
 #login {
     margin-left: 90%;
@@ -29,14 +28,12 @@ p {
     text-align: center;
 }
 
-
 .textbox  {
     display: block;
     margin-left: auto;
 margin-right: auto;  
     text-align: center;
 }
-
 
 .stars {
     text-align: center;
