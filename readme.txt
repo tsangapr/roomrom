@@ -1,10 +1,10 @@
- Top level of project folder: 
+﻿ Top level of project folder: 
 ├── .gitignore               		# Git ignore file
 ├── error_page.html          		# File for error
 ├── index.html               		# landing HTML file, this is what users see when you come to url
 ├── login.html               		# login HTML file, contains logic for user authentication
 ├── main.html                		# after logged in, you can add cups, and see history here
-├── README.md	            		# Git ignore file
+├── README.md	            		# Read me file
 ├── feedback.html	     		# feedback.html file, this is where users rate their route
 ├── feedback_thanks.html     		# feedback_thanks.html file, this is where the user gets redirected to main page after submitting feedback
 ├── savelist.html            		# save list HTML file, displays the users most frequent routes
