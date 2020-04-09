@@ -1,3 +1,4 @@
+ 
 h1 {
     text-align: center;
     text-align: auto;
@@ -31,33 +32,10 @@ h1 {
     height: 5vh;
 }
 
-#submit {
-    margin-top: 50vh;
-    margin-left: 0.7%;
-    margin-right: 0%;
-    width: 5vw;
-    height: 5vh;
-}
 
 #menubar {
     margin-top: 1.3vh;
 }
-
-#menu {
-    font-size: 1.5vw;
-}
-
-#home {
-    font-size: 1.5vw;
-}
-
-#savelist {
-    font-size: 1.5vw;
-}
-
-#issuereport {
-    font-size: 1.5vw;
-} 
 
 /* Popup container */
 .popup {
@@ -174,12 +152,13 @@ h1 {
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      width: 5vw;
-      height: 5vh;
+      width: 10vw;
+      width: 10vh;
+      margin-top: 50vh;
+      margin-left: 0.7%;
+      margin-right: 0%;
   }
 
   #indexSubmit {
     text-align:center;
   }
-
-  

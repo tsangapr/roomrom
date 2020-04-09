@@ -1,4 +1,6 @@
-
+//---------------------------------------------------------
+// Click functions for star ratings
+//---------------------------------------------------------
 
 document.getElementById("one").addEventListener("click", function () {
     

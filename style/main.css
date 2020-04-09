@@ -31,28 +31,17 @@ h1 {
 }
 
 #submit {
+    background-color: #dddddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 10vw;
+    width: 10vh;
     margin-top: 50vh;
     margin-left: 0.7%;
     margin-right: 0%;
-    width: 5vw;
-    height: 5vh;
-}
+  }
 
-#menu {
-    font-size: 1.5vw;
-}
-
-#home {
-    font-size: 1.5vw;
-}
-
-#savelist {
-    font-size: 1.5vw;
-}
-
-#issuereport {
-    font-size: 1.5vw;
-}
 
 .bg-default {
     color: #7eb1f4;
