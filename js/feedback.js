@@ -1,9 +1,7 @@
 //---------------------------------------------------------
 // Click functions for star ratings
 //---------------------------------------------------------
-
 document.getElementById("one").addEventListener("click", function () {
-    
     if (document.getElementById('one').classList.contains("unchecked")) {
         document.getElementById('one').classList.remove("unchecked");
         document.getElementById('one').classList.add("checked");
@@ -14,7 +12,6 @@ document.getElementById("one").addEventListener("click", function () {
 });   
 
 document.getElementById("two").addEventListener("click", function () {
-
     if (document.getElementById('two').classList.contains("unchecked")) {
             document.getElementById('two').classList.remove("unchecked");
             document.getElementById('two').classList.add("checked");
@@ -25,7 +22,6 @@ document.getElementById("two").addEventListener("click", function () {
 });
 
 document.getElementById("three").addEventListener("click", function () {
-
     if (document.getElementById('three').classList.contains("unchecked")) {
             document.getElementById('three').classList.remove("unchecked");
             document.getElementById('three').classList.add("checked");
@@ -36,7 +32,6 @@ document.getElementById("three").addEventListener("click", function () {
 });
 
 document.getElementById("four").addEventListener("click", function () {
-
     if (document.getElementById('four').classList.contains("unchecked")) {
             document.getElementById('four').classList.remove("unchecked");
             document.getElementById('four').classList.add("checked");
@@ -47,7 +42,6 @@ document.getElementById("four").addEventListener("click", function () {
 });
 
 document.getElementById("five").addEventListener("click", function () {
-
     if (document.getElementById('five').classList.contains("unchecked")) {
             document.getElementById('five').classList.remove("unchecked");
             document.getElementById('five').classList.add("checked");

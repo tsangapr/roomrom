@@ -14,23 +14,12 @@ function popup1() {
     popup.classList.toggle("show1");
   }
 
-//--------------------------------------------------------
-//---------End of function popup() and popup1()-----------
-//--------------------------------------------------------
-
-
-
 //---------------------------------------------------------
 // Shows a pop up bubble (ex. on feedback page button)
 //---------------------------------------------------------
 function pleaseLogIn() {
   document.getElementById("indexSubmit").innerHTML = "<br>" + "Please Log In to proceed.";
 }
-//--------------------------------------------------------
-//-------------End of log in message function-------------
-//--------------------------------------------------------
-
-
 
 //---------------------------------------------------------
 // Enables the "Save List" option in the navbar upon login
@@ -40,11 +29,6 @@ firebase.auth().onAuthStateChanged(function (user) {
       document.getElementById("savelist").classList.remove("disabled");
   }
 });
-//--------------------------------------------------------
-//------------------End of save list function-------------
-//--------------------------------------------------------
-
-
 
 // ------------------------------------------------------
 // If the currently logged in user is authenticated,
@@ -56,11 +40,6 @@ function showName() {
     document.getElementById("name").innerHTML = user.displayName;
   });
 }
-//--------------------------------------------------------
-//----------------End of function showName())-------------
-//--------------------------------------------------------
-
-
 
 // ---------------------------------------------
 // From main page, when submit button is clicked, 
@@ -82,14 +61,12 @@ function setAddListener() {
     var newPage = origin + "_" + destination + ".html";
     }
 
-
 //------------------------------------------------------------------------
-//When a logged-in user selects an orgin, then selects a destination,
-//the moment the user clicks submit; "routeObject" is created &
-//saved into the users "History" collection in firebase. User is then
-//redirected to the selected html page.
+// When a logged-in user selects an orgin, then selects a destination,
+// the moment the user clicks submit; "routeObject" is created &
+// saved into the users "History" collection in firebase. User is then
+// redirected to the selected html page.
 //------------------------------------------------------------------------
-
     var routeObject = {
       name: newPage,
       time: firebase.firestore.FieldValue.serverTimestamp()   
@@ -105,12 +82,8 @@ function setAddListener() {
 });
 }
 
-
-
 //----------------------------------------------------------------
-//                           History page
-//
-//
+// Shows the users history in the "SaveList.html" page.
 //----------------------------------------------------------------
 function getHistory() {
   firebase.auth().onAuthStateChanged(function (user) {
@@ -130,7 +103,6 @@ function getHistory() {
           paragraphNameTime.appendChild(nodeName);
           $("#" + userHistoryId).click(function () {
             window.location.replace(nameHistory);
-
           });
         });
       }
@@ -138,13 +110,3 @@ function getHistory() {
   }
   );
 }
-//-------------------------------------------------------------------
-//------------------End of function getHistory()---------------------
-//-------------------------------------------------------------------
-
-
-
-//---------------------------------------------------------
-//--------------------END OF FUNCTIONAL CODE---------------
-//---------------------------------------------------------
-
