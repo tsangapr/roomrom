@@ -5,12 +5,21 @@ function popup() {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
   }
-//--------------------------------------------------------
-//--------------------End of function popup()-------------
-//--------------------------------------------------------
 
+//---------------------------------------------------------
+// Shows a pop up bubble (ex. on feedback page button)
+//---------------------------------------------------------
+function popup1() {
+    var popup = document.getElementById("myPopup1");
+    popup.classList.toggle("show1");
+  }
 
-
+//---------------------------------------------------------
+// Shows a pop up bubble (ex. on feedback page button)
+//---------------------------------------------------------
+function pleaseLogIn() {
+  document.getElementById("indexSubmit").innerHTML = "<br>" + "Please Log In to proceed.";
+}
 
 //---------------------------------------------------------
 // Enables the "Save List" option in the navbar upon login
@@ -20,26 +29,17 @@ firebase.auth().onAuthStateChanged(function (user) {
       document.getElementById("savelist").classList.remove("disabled");
   }
 });
-//-------------------------------------------------------
-//------------------End of save list function-------------
-//--------------------------------------------------------
 
-
-
-// ---------------------------------------------
+// ------------------------------------------------------
 // If the currently logged in user is authenticated,
 // then show the person's name in the header (id="name")
-// ---------------------------------------------
+// ------------------------------------------------------
 function showName() {
   firebase.auth().onAuthStateChanged(function (user) {
     // console.log(Navigators);
     document.getElementById("name").innerHTML = user.displayName;
   });
 }
-//---------------------------------------------------------
-//----------------End of function showName())---------------
-//--------------------------------------------------------
-
 
 // ---------------------------------------------
 // From main page, when submit button is clicked, 
@@ -60,16 +60,13 @@ function setAddListener() {
     } else {
     var newPage = origin + "_" + destination + ".html";
     }
-    document.getElementById("testTo").innerHTML = origin;
-    document.getElementById("testDest").innerHTML = destination;
 
 //------------------------------------------------------------------------
-//When a logged-in user selects an orgin, then selects a destination,
-//the moment the user clicks submit; "routeObject" is created &
-//saved into the users "History" collection in firebase. User is then
-//redirected to the selected html page.
+// When a logged-in user selects an orgin, then selects a destination,
+// the moment the user clicks submit; "routeObject" is created &
+// saved into the users "History" collection in firebase. User is then
+// redirected to the selected html page.
 //------------------------------------------------------------------------
-
     var routeObject = {
       name: newPage,
       time: firebase.firestore.FieldValue.serverTimestamp()   
@@ -85,13 +82,9 @@ function setAddListener() {
 });
 }
 
-
-
 //----------------------------------------------------------------
-//History page work in progres
-//
-//
-//-----------------------------------------------------------------
+// Shows the users history in the "SaveList.html" page.
+//----------------------------------------------------------------
 function getHistory() {
   firebase.auth().onAuthStateChanged(function (user) {
     db.collection("Navigators").doc(user.uid)
@@ -110,7 +103,6 @@ function getHistory() {
           paragraphNameTime.appendChild(nodeName);
           $("#" + userHistoryId).click(function () {
             window.location.replace(nameHistory);
-
           });
         });
       }
@@ -118,56 +110,3 @@ function getHistory() {
   }
   );
 }
-//--------------------------------------------------------------------
-//------------------End of function getHistory()---------------------
-//---------------------------------------------------------------------
-
-
-
-//---------------------------------------------------------
-//--------------------END OF FUNCTIONAL CODE---------------
-//---------------------------------------------------------
-
- //-----------------------------------------------------------
- //-----------USESLESSS CODE BUT MIGHT BE IMPORTANT IN FUTURE 
- //-----------------------------------------------------------    
-
-// db.collection("users").doc(user.uid)
-// .collection("route-history").
-// get(function(snap){
-//      console.log (snap.data());  // a list of document
-//      snap.forEach(function(doc){
-//           console.log (doc.data())  // a doc/route
-//           //display at element 
-//           // inner.HTML = doc.data().name    //display se12tosw6
-//      })
-// })
-
-
-// // ---------------------------------------------
-// // If no log in, display id="nonuser" header,
-// // If user logged in, display id="user" header. 
-// // ---------------------------------------------
-// function showHeader() {
-//   firebase.auth().onAuthStateChanged(function (Navigators) {
-
-    
-//       let anc = document.createElement("a");
-//       anc.href = "main.html"
-      
-//       document.getElementById("nonuserheading").outerHTML = anc.href;
-//       document.getElementById("nonuserheading").innerHTML = 
-//       <p id="afterlogin">Welcome back, <span id="name">Friend</span></p>
-          
-
-
-// var anc = document.createElement("a");
-// anc.href = "https://developer.mozilla.org?a=b&c=d";
-// console.log(anc.outerHTML); // output: "<a href='https://developer.mozilla.org?a=b&amp;c=d'></a>"
-//     }
-//     // console.log(Navigators);
-//     // document.getElementById("name").innerHTML = Navigators.displayName;
-//   });
-// }
-
-

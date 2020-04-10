@@ -1,5 +1,7 @@
+ 
 h1 {
     text-align: center;
+    text-align: auto;
     font-size: 11vh;
     color: #089cff; 
 }
@@ -10,52 +12,32 @@ h1 {
 
 #login {
     margin-left: 90%;
-    font-size: 3vh;
-    
+    width: auto;
+    font-size: 3vh;   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-#fromwhere {
+#from {
     float: left;
     margin-left: 15%;
     width: 30vw;
     margin-top: 5vh;
-    height: 30vh;
+    height: 5vh;
 }
 
-#towhere {
+#to {
     float: right;
     margin-right: 15%;
     width: 30vw;
     margin-top: 5vh;
-}
-
-#submit {
-    margin-top: 50vh;
-    margin-left: 0.7%;
-    margin-right: 0%;
-    width: 5vw;
     height: 5vh;
 }
 
 #menubar {
     margin-top: 1.3vh;
 }
-
-#menu {
-    font-size: 1.5vw;
-}
-
-#home {
-    font-size: 1.5vw;
-}
-
-#savelist {
-    font-size: 1.5vw;
-}
-
-#issuereport {
-    font-size: 1.5vw;
-} 
 
 /* Popup container */
 .popup {
@@ -67,9 +49,34 @@ h1 {
     -ms-user-select: none;
     user-select: none;
   }
+
+.popup1 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
   
   /* The actual popup */
   .popup .popuptext {
+    visibility: hidden;
+    width: 20vw;
+    background-color: #dddddd;
+    color: black;
+    text-align: center;
+    border-radius: 0.7vw;
+    padding: 1vw 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 50%;
+    margin-left: -10vw;
+  }
+
+  .popup1 .popuptext1 {
     visibility: hidden;
     width: 20vw;
     background-color: #dddddd;
@@ -95,9 +102,26 @@ h1 {
     border-style: solid;
     border-color: #dddddd transparent transparent transparent;
   }
+
+  .popup1 .popuptext1::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #dddddd transparent transparent transparent;
+  }
   
   /* Toggle this class - hide and show the popup */
   .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  .popup1 .show1 {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
@@ -114,15 +138,37 @@ h1 {
     to {opacity:1 ;}
   }
 
-  .navbar-default {
-      color: #7eb1f4;
-      background-color: #7eb1f4;
-  }
+  /* change the color of navigator menu */
+  .bg-default {
+    color: #7eb1f4;
+    background-color: #7eb1f4;
+}
 
+/* change the color of the html page */
   body {
       background-color: #b2c6e9;
   }
 
   #submit {
       background-color: #dddddd;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 10vw;
+      width: 10vh;
+      height: 5vh;
+      margin-top: 50vh;
+      margin-left: 0.7%;
+      margin-right: 0%;
+      border-radius: 5px;
+      border-color: grey;
+  }
+
+  #submit:hover {
+    background-color: grey;
+    color: white;
+  }
+
+  #indexSubmit {
+    text-align:center;
   }
